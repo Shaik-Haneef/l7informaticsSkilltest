@@ -8,7 +8,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "draganddroptest": "cypress run --spec cypress/integration/dragdroptest.spec.js",
     "infinitescrolltest": "cypress run --spec cypress/integration/infinitescroll.spec.js",
     "twoDarraytest": "node ./cypress/integration/twoDimentionalArray.js",
@@ -22,9 +21,7 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.0.0",
     "cypress": "^8.4.0",
-    "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^2.2.1",
-    "cypress-plugin-retries": "^1.5.2",
     "del-cli": "^3.0.1",
     "mocha": "^8.2.0",
     "mochawesome": "^6.1.1",

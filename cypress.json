@@ -1,7 +1,18 @@
 { 
     "env": {
-        "url": "http://the-internet.herokuapp.com/",
-        "RETRIES": 1
-       
-      }
+        "url": "http://the-internet.herokuapp.com/"
+    },
+	"reporter": "mochawesome",
+	"reporterOptions": {
+		"reportDir": "cypress/reports/mocha",
+		"reportFilename": "report",
+		"overwrite": false,
+		"html": true,
+		"json": true,
+		"charts": true
+	},
+	"retries": {
+		"runMode": 1,
+		"openMode": 1
+	}
 }
