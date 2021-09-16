@@ -1,0 +1,34 @@
+{
+  "env": {
+    "url": "http://the-internet.herokuapp.com/",
+    "RETRIES": 1
+  },
+  "name": "skilltest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "draganddroptest": "cypress run --spec cypress/integration/dragdroptest.spec.js",
+    "infinitescrolltest": "cypress run --spec cypress/integration/infinitescroll.spec.js",
+    "twoDarraytest": "node ./cypress/integration/twoDimentionalArray.js",
+    "clean:reports": "del-cli cypress/reports/mocha/*",
+    "merge": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate_mochawesome_report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run merge && npm run generate_mochawesome_report"
+  },
+  "author": "Haneef",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.0.0",
+    "cypress": "^8.4.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^2.2.1",
+    "cypress-plugin-retries": "^1.5.2",
+    "del-cli": "^3.0.1",
+    "mocha": "^8.2.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}

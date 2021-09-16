@@ -1,0 +1,7 @@
+{ 
+    "env": {
+        "url": "http://the-internet.herokuapp.com/",
+        "RETRIES": 1
+       
+      }
+}
